@@ -16,7 +16,7 @@ const Travels = () => {
     return (
         <div className="container my-5">
             <h1 className='text-center'>Recommended Travels </h1>
-            <div className='row'>
+            <div className='row mb-5'>
                 {
                     travels.map(travel => <Travel key={travel.id} travel={travel}></Travel>)
                 }
