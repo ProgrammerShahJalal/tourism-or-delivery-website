@@ -8,6 +8,11 @@ import Footer from './components/Shared/Footer/Footer';
 import Navbar from './components/Shared/Navbar/Navbar';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import Booking from './components/Booking/Booking';
+import AddService from './components/Booking/AddService/AddService';
+import Contact from './components/Contact/Contact';
+import Travels from './components/Travels/Travels';
+import ManageServices from './components/Booking/ManageServices/ManageServices';
+import MyOrders from './components/Booking/MyOrders/MyOrders';
 
 
 function App() {
@@ -26,14 +31,26 @@ function App() {
             <Route path='/about'>
               <About></About>
             </Route>
+            <Route path='/tours'>
+              <Travels></Travels>
+            </Route>
             <Route path='/contact'>
-              <About></About>
+              <Contact></Contact>
             </Route>
             <PrivateRoute path="/booking/:travelId">
               <Booking></Booking>
             </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='/myOrders'>
+              <MyOrders></MyOrders>
+            </Route>
+            <Route path='/addService'>
+              <AddService></AddService>
+            </Route>
+            <Route path='/manageServices'>
+              <ManageServices></ManageServices>
             </Route>
           </Switch>
           <Footer></Footer>
