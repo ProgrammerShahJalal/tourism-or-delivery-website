@@ -1,8 +1,9 @@
 .profile{
+    background-color: white;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: white;
+    /* background-color: white; */
 }
 .logout-btn{
     color: white;
@@ -11,6 +12,39 @@
     border-radius: 25px;
     background-color: darkblue;
 }
+#indicator{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
 .google{
     width: 1.5rem;
 }
+/* Style The Dropdown Button */
+.dropbtn {
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #14797c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

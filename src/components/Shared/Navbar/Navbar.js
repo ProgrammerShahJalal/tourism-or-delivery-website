@@ -28,7 +28,27 @@ const Navbar = () => {
                         </li>
                         {
                             user.email ?
-                                <div className="mt-2 ms-5 text-white"> <img className='profile' src={user.photoURL} alt="" /> <span>{user.displayName}</span> <button className="logout-btn" onClick={logout}>Logout</button>
+                                <div className="mt-2 ms-5">
+
+                                    <div className="dropdown">
+                                        <Link><img className='profile' src={user.photoURL} alt="" /> <span className='text-white'>{user.displayName} </span>
+                                            <i className="fas fa-chevron-circle-down" id='indicator'></i></Link>
+                                        <div className="dropdown-content">
+                                            <li className="nav-item">
+                                                <Link to='/myOrders' className="nav-link active text-white" aria-current="page">My Orders</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link to='/addService' className="nav-link active text-white" aria-current="page">Add a new Tour</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link to='/manageServices' className="nav-link active text-white" aria-current="page">Manage all Orders</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link active text-white" aria-current="page"> <Link><button className="logout-btn" onClick={logout}>Logout</button></Link></Link>
+                                            </li>
+
+                                        </div>
+                                    </div>
                                 </div>
                                 :
                                 <li className="nav-item">
