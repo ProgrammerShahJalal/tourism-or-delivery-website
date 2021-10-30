@@ -1,0 +1,32 @@
+.footer{
+    color: lightgray;
+    background-color: #121921;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-paragraph{
+    text-align: justify;
+}
+
+.footer-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+.footer-icon i:hover{
+    color: #d35dff;
+}
+.footer-icon .fab{
+    margin-right: 10px;
+}
+/* last footer style */
+.last-footer{
+    padding-top: 15px;
+    border-top: 2px solid rgba(128, 128, 128, 0.438);
+}
+#special{
+    color: orange;
+    cursor: pointer;
+}
+.logo{
+    width: 5%;
+}

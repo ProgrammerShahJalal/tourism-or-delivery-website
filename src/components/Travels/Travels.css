@@ -1,0 +1,18 @@
+.tour-title{
+    text-align: center;
+}
+.justify{
+    text-align: justify;
+}
+.regular-btn{
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 25px;
+    background-color: green;
+}
+.regular-btn:hover{
+    background-color: black;
+    transition: 2s;
+}

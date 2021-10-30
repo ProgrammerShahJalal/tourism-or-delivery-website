@@ -1,0 +1,16 @@
+.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+.logout-btn{
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: darkblue;
+}
+.google{
+    width: 1.5rem;
+}
