@@ -19,7 +19,7 @@ const Travel = ({ travel }) => {
             <div className="row d-flex justify-content-between align-items-center">
                 <div className="col-md-6">
                     <Link to={`/booking/${_id}`}>
-                        <button onClick={() => handleOrder(_id)} className="regular-btn text-nowrap">Book Now</button>
+                        <button onClick={() => handleOrder(_id)} className="travel-btn text-nowrap">Book Now</button>
                     </Link>
                 </div>
                 <div className="col-md-6">
