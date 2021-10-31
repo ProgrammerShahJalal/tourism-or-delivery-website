@@ -13,8 +13,9 @@ const MyOrders = () => {
 
     console.log(orders);
     return (
-        <div>
-            <h1>My Orders : {orders.length} of {user.email}</h1>
+        <div className='my-5 text-center'>
+            <h1 className=''>My Orders</h1>
+            <h3>My Orders : {orders.length} as {user.email}</h3>
         </div>
     );
 };

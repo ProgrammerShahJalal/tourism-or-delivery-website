@@ -27,9 +27,9 @@ const AddTourist = () => {
     }
     return (
         <div className='mb-5'>
-            <h1 className="mt-5 text-center">
-                Please register As a Tourist
-            </h1>
+            <div className="text-center">
+                <h1 className="mt-5">Please register As a Tourist</h1>
+            </div>
             <div className="w-25 m-auto mt-5">
                 <div className="main-form border border d-flex justify-content-center align-items-center">
                     <div className="login-form">

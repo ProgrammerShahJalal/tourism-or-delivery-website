@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddTourist from "../../AddTourist/AddTourist";
 import AddService from "../../Booking/AddService/AddService";
 import ManageServices from "../../Booking/ManageServices/ManageServices";
 import AllTourist from "../AllTourist/AllTourist";
@@ -23,6 +24,12 @@ const AdminDashboard = () => {
                                         All Tourist
                                     </li>
                                     <li
+                                        onClick={() => setControl("addTourist")}
+                                        className="admin-menu p-2"
+                                    >
+                                        Add Tourist
+                                    </li>
+                                    <li
                                         onClick={() => setControl("addService")}
                                         className="admin-menu p-2"
                                     >
@@ -41,6 +48,7 @@ const AdminDashboard = () => {
                             {control === "allTourist" && <AllTourist></AllTourist>}
                             {control === "allService" && <ManageServices></ManageServices>}
                             {control === "addService" && <AddService></AddService>}
+                            {control === "addTourist" && <AddTourist></AddTourist>}
                         </div>
                     </div>
                 </div>
