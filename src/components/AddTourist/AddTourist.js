@@ -17,7 +17,7 @@ const AddTourist = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/addTourist', data)
+        axios.post('https://shrouded-tundra-27347.herokuapp.com/addTourist', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully register as a Tourist!');

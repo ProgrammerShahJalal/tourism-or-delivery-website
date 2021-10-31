@@ -11,5 +11,26 @@
 }
 .special-img{
     border-radius: 25px;
-    width: 10rem;
+    width: 7rem;
+}
+
+/* manage service box css */
+.manage-service-box{
+    margin: 25px auto;
+    display: block;
+    overflow: auto;
+    width: 99%;
+    height: 40%;
+}
+.manage-btn{
+    color:white;
+    background-color: darkorange;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+}
+.manage-btn:hover{
+    background-color: black;
+    transition: 1.5s;
 }

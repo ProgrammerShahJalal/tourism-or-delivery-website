@@ -14,6 +14,7 @@ import Travels from './components/Travels/Travels';
 import ManageServices from './components/Booking/ManageServices/ManageServices';
 import MyOrders from './components/Booking/MyOrders/MyOrders';
 import AddTourist from './components/AddTourist/AddTourist';
+import AdminDashboard from './components/Admin/AdminDashbord/AdminDashbord';
 
 
 function App() {
@@ -55,6 +56,12 @@ function App() {
             </PrivateRoute>
             <Route path='/addTourist'>
               <AddTourist></AddTourist>
+            </Route>
+            <Route path='/allTourist'>
+              <AddTourist></AddTourist>
+            </Route>
+            <Route path='/adminDashboard'>
+              <AdminDashboard></AdminDashboard>
             </Route>
           </Switch>
           <Footer></Footer>

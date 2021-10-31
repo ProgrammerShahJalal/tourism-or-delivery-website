@@ -10,7 +10,7 @@
     padding: 5px;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 50vh;
+    width: 75vh;
 }
 .error{
     color: red;
@@ -18,3 +18,20 @@
 #contact-title{
     text-align: right;
 }
+
+/* admin dashboard css */
+.admin-area {
+    background: #000;
+    color: white;
+    height: 100vh;
+  }
+  .admin-container {
+    overflow-x: hidden;
+  }
+  .admin-menu {
+    list-style: none;
+    cursor: pointer;
+  }
+  .admin-menu:hover {
+    color: blue;
+  }

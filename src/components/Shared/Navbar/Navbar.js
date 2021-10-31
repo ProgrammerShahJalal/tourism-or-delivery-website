@@ -8,7 +8,8 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
             <div className="container-fluid container">
-                <Link to='/' className="navbar-brand w-50"> <img className='logo' src="https://i.ibb.co/ckQ5x6N/travel.png" alt="" /> World Tours</Link>
+                <Link to='/' className="navbar-brand w-50"> <img className='logo' src="https://i.ibb.co/ckQ5x6N/travel.png" alt="" /> World Tours
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -25,6 +26,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link to='/contact' className="nav-link active" aria-current="page">Contact</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/adminDashboard' className="nav-link active" aria-current="page">Admin</Link>
                         </li>
                         {
                             user.email ?
@@ -43,7 +47,7 @@ const Navbar = () => {
                                                 <Link to='/manageServices' className="nav-link active text-white" aria-current="page">Manage all Orders</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link active text-white" aria-current="page"> <Link><button className="logout-btn" onClick={logout}>Logout</button></Link></Link>
+                                                <li className="nav-link active text-white" aria-current="page"> <li><button className="logout-btn" onClick={logout}>Logout</button></li></li>
                                             </li>
 
                                         </div>

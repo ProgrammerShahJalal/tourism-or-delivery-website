@@ -29,17 +29,19 @@ const ManageServices = () => {
 
     }
     return (
-        <div className="text-center mx-5">
-            <h2 className='title'>Manage Services</h2>
-            {
-                services.map(service => <div key={service._id}>
-                    <div className="row border rounded border-primary mb-3 py-3 d-flex justify-content-center align-items-center">
-                        <img className='col-md-4 special-img' src={service.img} alt="" />
-                        <h4 className='col-md-4'>{service.name}</h4>
-                        <button className='mb-3 h-25 regular-btn col-md-4' onClick={() => handleDelete(service._id)}>Delete</button>
-                    </div>
-                </div>)
-            }
+        <div className='manage-service-box container'>
+            <div className="text-center mx-5">
+                <h2 className='title'>Manage Services</h2>
+                {
+                    services.map(service => <div key={service._id}>
+                        <div className="row border rounded border-primary mb-3 py-3 d-flex justify-content-center align-items-center">
+                            <img className='col-md-4 special-img' src={service.img} alt="" />
+                            <h4 className='col-md-4'>{service.name}</h4>
+                            <button className='mb-3 h-25 manage-btn col-md-4' onClick={() => handleDelete(service._id)}>Delete</button>
+                        </div>
+                    </div>)
+                }
+            </div>
         </div>
     );
 };
