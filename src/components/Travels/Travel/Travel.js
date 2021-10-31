@@ -12,14 +12,14 @@ const Travel = ({ travel }) => {
     }
 
     return (
-        <div className='col col-lg-4 col-md-6 col-sm-12'>
+        <div className='col-md-4'>
             <img className="img-fluid mt-5" src={img} alt="" />
             <h3 className='tour-title'>{name}</h3>
             <p className='justify'>{description}</p>
             <div className="row d-flex justify-content-between align-items-center">
                 <div className="col-md-6">
                     <Link to={`/booking/${_id}`}>
-                        <button onClick={() => handleOrder(_id)} className="regular-btn">Book Now</button>
+                        <button onClick={() => handleOrder(_id)} className="regular-btn text-nowrap">Book Now</button>
                     </Link>
                 </div>
                 <div className="col-md-6">

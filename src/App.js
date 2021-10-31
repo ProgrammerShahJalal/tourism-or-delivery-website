@@ -13,6 +13,7 @@ import Contact from './components/Contact/Contact';
 import Travels from './components/Travels/Travels';
 import ManageServices from './components/Booking/ManageServices/ManageServices';
 import MyOrders from './components/Booking/MyOrders/MyOrders';
+import AddTourist from './components/AddTourist/AddTourist';
 
 
 function App() {
@@ -43,14 +44,17 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <Route path='/myOrders'>
+            <PrivateRoute path='/myOrders'>
               <MyOrders></MyOrders>
-            </Route>
-            <Route path='/addService'>
+            </PrivateRoute>
+            <PrivateRoute path='/addService'>
               <AddService></AddService>
-            </Route>
-            <Route path='/manageServices'>
+            </PrivateRoute>
+            <PrivateRoute path='/manageServices'>
               <ManageServices></ManageServices>
+            </PrivateRoute>
+            <Route path='/addTourist'>
+              <AddTourist></AddTourist>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -31,8 +31,7 @@ const Navbar = () => {
                                 <div className="mt-2 ms-5">
 
                                     <div className="dropdown">
-                                        <Link><img className='profile' src={user.photoURL} alt="" /> <span className='text-white'>{user.displayName} </span>
-                                            <i className="fas fa-chevron-circle-down" id='indicator'></i></Link>
+                                        <li><img className='profile' src={user.photoURL} alt="" /> <span className='text-white'>{user.displayName} </span> <i className="fas fa-chevron-circle-down" id='indicator'></i></li>
                                         <div className="dropdown-content">
                                             <li className="nav-item">
                                                 <Link to='/myOrders' className="nav-link active text-white" aria-current="page">My Orders</Link>

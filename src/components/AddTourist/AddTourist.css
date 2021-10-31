@@ -1,0 +1,13 @@
+.main-form {
+    width: 300px;
+    height: 380px;
+  }
+  .login-form{
+      width: 100%;
+  }
+  .login-form input{
+      width: 100%;
+  }
+  #special-textarea{
+      width: 100%;
+  }

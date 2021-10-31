@@ -8,21 +8,24 @@ const ManageServices = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+
     const handleDelete = id => {
-        const url = `https://shrouded-tundra-27347.herokuapp.com/tours/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    window.confirm('Are you sure to delete?');
-                    alert('Deleted Successfully!')
-                    const remaining = services.filter(service => service._id !== id);
-                    setServices(remaining);
-                }
-                console.log(data);
+        const result = window.confirm('Are you sure to delete?');
+        if (result) {
+            const url = `https://shrouded-tundra-27347.herokuapp.com/tours/${id}`
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Deleted Successfully!')
+                        const remaining = services.filter(service => service._id !== id);
+                        setServices(remaining);
+                    }
+                    console.log(data);
+                })
+        }
 
     }
     return (

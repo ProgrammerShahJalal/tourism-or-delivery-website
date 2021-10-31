@@ -2,7 +2,7 @@
     display: flex;
 }
 .booking-form{
-    margin:30px 150px;
+    margin:30px auto;
 }
 .booking-form input {
     display: block;
@@ -10,8 +10,11 @@
     padding: 5px;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 300px;
+    width: 50vh;
 }
 .error{
     color: red;
+}
+#contact-title{
+    text-align: right;
 }

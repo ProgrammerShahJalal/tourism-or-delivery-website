@@ -8,7 +8,6 @@ const AddService = () => {
 
     const onSubmit = data => {
         console.log(data);
-
         axios.post('https://shrouded-tundra-27347.herokuapp.com/tours', data)
             .then(res => {
                 if (res.data.insertedId) {
