@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth/useAuth";
 import axios from "axios";
 
 const AddTourist = () => {
-    const { user } = useAuth();
+    // const { user } = useAuth();
     const {
         register,
         handleSubmit,
