@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import './Booking.css';
 import useAuth from '../../hooks/useAuth/useAuth';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const Booking = () => {
     const { user } = useAuth();
@@ -12,9 +13,15 @@ const Booking = () => {
     const { handleSubmit, register, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        reset();
-    };
 
+        axios.post('https://shrouded-tundra-27347.herokuapp.com/addOrders', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Successfully placed your orders!');
+                    reset();
+                }
+            })
+    }
 
     useEffect(() => {
         fetch(`https://shrouded-tundra-27347.herokuapp.com/tours/${travelId}`)
@@ -51,20 +58,44 @@ const Booking = () => {
                         </div>
                     </div >
                     <div className='col-md-6'>
-                        <form onSubmit={handleSubmit(onSubmit)} className="booking-form">
-                            <input defaultValue={user.displayName} {...register("name", { required: true })} />
-                            <input placeholder="Your Email" defaultValue={user.email} {...register("email", { required: true })} />
-                            {errors.email && <span className='error'>This field is required</span>}
-                            <input placeholder="Your Address" {...register("address")} />
-                            <input type="tel" {...register("MobileNumber")} placeholder='Your Mobile' />
-                            <input placeholder="City" {...register("city", { required: true })} /> <br />
-                            <select {...register("Title")}>
-                                <option value="Mr">Mr</option>
-                                <option value="Mrs">Mrs</option>
-                                <option value="Miss">Miss</option>
-                                <option value="Dr">Dr</option>
-                            </select>
-                            <input type="submit" />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input
+                                {...register("name")}
+                                placeholder="Your Name"
+                                defaultValue={user.displayName}
+                                className="p-2 m-2"
+                            />
+                            <br />
+
+                            <input
+                                {...register("email", { required: true })}
+                                placeholder="Your Email"
+                                defaultValue={user.email}
+                                className="p-2 m-2"
+                            />
+                            <br />
+                            <input
+                                {...register("text", { required: true })}
+                                placeholder="Order Name"
+                                defaultValue={travel.name}
+                                className="p-2 m-2"
+                            />
+                            <br />
+                            <input
+                                {...register("booking", { required: true })}
+                                placeholder="Manage booking"
+                                className="p-2 m-2"
+                            />
+                            <br />
+                            <textarea
+                                {...register("description", { required: true })}
+                                placeholder="Description"
+                                className="p-2 m-2"
+                            />
+                            <br />
+                            {errors.exampleRequired && <span>This field is required</span>}
+
+                            <input type="submit" className="travel-btn" />
                         </form>
                     </div>
                 </div>

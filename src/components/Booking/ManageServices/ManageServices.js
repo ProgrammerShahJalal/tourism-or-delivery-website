@@ -31,7 +31,7 @@ const ManageServices = () => {
     return (
         <div className='manage-service-box container'>
             <div className="text-center mx-5">
-                <h2 className='title'>Manage Services</h2>
+                <h2 className='title'>Manage All Services</h2>
                 {
                     services.map(service => <div key={service._id}>
                         <div className="row border rounded border-primary mb-3 py-3 d-flex justify-content-center align-items-center">

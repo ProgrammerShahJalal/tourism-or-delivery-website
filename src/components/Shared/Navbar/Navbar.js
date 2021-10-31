@@ -44,7 +44,7 @@ const Navbar = () => {
                                                 <Link to='/addService' className="nav-link active text-white" aria-current="page">Add a new Tour</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link to='/manageServices' className="nav-link active text-white" aria-current="page">Manage all Orders</Link>
+                                                <Link to='/allOrders' className="nav-link active text-white" aria-current="page">Manage all Orders</Link>
                                             </li>
                                             <li className="nav-item">
                                                 <li className="nav-link active text-white" aria-current="page"> <li><button className="logout-btn" onClick={logout}>Logout</button></li></li>
