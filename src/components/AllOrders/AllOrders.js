@@ -51,7 +51,7 @@ const AllOrders = () => {
                                 <td>{index + 1}</td>
                                 <td>{pd?.name}</td>
                                 <td>{pd?.email}</td>
-                                <td>{pd?.text}</td>
+                                <td>{pd?.destination}</td>
                                 <button onClick={() => handleDelete(pd._id)} className="btn bg-danger text-white p-2">Delete</button>
                             </tr>
                         </tbody>

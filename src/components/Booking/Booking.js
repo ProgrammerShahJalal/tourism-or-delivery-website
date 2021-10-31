@@ -75,7 +75,7 @@ const Booking = () => {
                             />
                             <br />
                             <input
-                                {...register("text", { required: true })}
+                                {...register("destination", { required: false })}
                                 placeholder="Order Name"
                                 defaultValue={travel.name}
                                 className="p-2 m-2"
@@ -83,7 +83,7 @@ const Booking = () => {
                             <br />
                             <input
                                 {...register("booking", { required: true })}
-                                placeholder="Manage booking"
+                                placeholder="How many days?"
                                 className="p-2 m-2"
                             />
                             <br />

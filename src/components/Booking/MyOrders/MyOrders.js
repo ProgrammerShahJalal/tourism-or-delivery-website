@@ -8,15 +8,18 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://shrouded-tundra-27347.herokuapp.com/allOrders/${user?.email}`)
+        fetch("https://shrouded-tundra-27347.herokuapp.com/allOrders")
             .then((res) => res.json())
-            .then((data) => setOrders(data));
-    }, [user?.email]);
+            .then((data) => {
+                setOrders(data);
+                console.log(data);
+            });
+    }, []);
 
-    const handleDelete = email => {
+    const handleDelete = id => {
         const result = window.confirm('Are you sure to delete?');
         if (result) {
-            const url = `https://shrouded-tundra-27347.herokuapp.com/allOrders/${email}`
+            const url = `https://shrouded-tundra-27347.herokuapp.com/allOrders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -24,7 +27,7 @@ const MyOrders = () => {
                 .then(data => {
                     if (data.deletedCount) {
                         alert('Deleted Successfully!')
-                        const remaining = orders.filter(pd => pd.email !== email);
+                        const remaining = orders.filter(pd => pd._id !== id);
                         setOrders(remaining);
                     }
                     console.log(data);
