@@ -15,7 +15,7 @@
 <li>React Bootstrap</li>
 <li>React Router</li>
 <li>React Axios</li>
-<li>Mongodb</li>
+<li>MongoDB</li>
 <br/>
 <b><blockquote> Some Features and Functionality</blockquote></b>
 <li>React Hook Form</li>
