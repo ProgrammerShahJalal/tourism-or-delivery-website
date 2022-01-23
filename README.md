@@ -10,7 +10,7 @@
 <li>CSS</li>
 <li>JavaScript</li>
 <li>Node Js</li>
-<li>Node Express</li>
+<li>Express Js</li>
 <li>Bootstrap</li>
 <li>React Bootstrap</li>
 <li>React Router</li>
